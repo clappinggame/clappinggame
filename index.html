@@ -1,236 +1,107 @@
-<!doctype html>
-<!--Quite a few clients strip your Doctype out, and some even apply their own. Many clients do honor your doctype and it can make things much easier if you can validate constantly against a Doctype.-->
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>拍手游戏h5</title>
+<title>Clappinggame Html5</title>
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
 
-<!-- Please use an inliner tool to convert all CSS to inline as inpage or external CSS is removed by email clients -->
-<!-- important in CSS is used to prevent the styles of currently inline CSS from overriding the ones mentioned in media queries when corresponding screen sizes are encountered -->
-
-<style type="text/css">
-body {
-	margin: 0;
-}
-body, table, td, p, a, li, blockquote {
-	-webkit-text-size-adjust: none!important;
-	font-family: sans-serif;
-	font-style: normal;
-	font-weight: 400;
-}
-button {
-	width: 90%;
-}
-
-@media screen and (max-width:600px) {
-/*styling for objects with screen size less than 600px; */
-body, table, td, p, a, li, blockquote {
-	-webkit-text-size-adjust: none!important;
-	font-family: sans-serif;
-}
-table {
-	/* All tables are 100% width */
-	width: 100%;
-}
-.footer {
-	/* Footer has 2 columns each of 48% width */
-	height: auto !important;
-	max-width: 48% !important;
-	width: 48% !important;
-}
-table.responsiveImage {
-	/* Container for images in catalog */
-	height: auto !important;
-	max-width: 30% !important;
-	width: 30% !important;
-}
-table.responsiveContent {
-	/* Content that accompanies the content in the catalog */
-	height: auto !important;
-	max-width: 66% !important;
-	width: 66% !important;
-}
-.top {
-	/* Each Columnar table in the header */
-	height: auto !important;
-	max-width: 48% !important;
-	width: 48% !important;
-}
-.catalog {
-	margin-left: 0%!important;
-}
-}
-
-@media screen and (max-width:480px) {
-/*styling for objects with screen size less than 480px; */
-body, table, td, p, a, li, blockquote {
-	-webkit-text-size-adjust: none!important;
-	font-family: sans-serif;
-}
-table {
-	/* All tables are 100% width */
-	width: 100% !important;
-	border-style: none !important;
-}
-.footer {
-	/* Each footer column in this case should occupy 96% width  and 4% is allowed for email client padding*/
-	height: auto !important;
-	max-width: 96% !important;
-	width: 96% !important;
-}
-.table.responsiveImage {
-	/* Container for each image now specifying full width */
-	height: auto !important;
-	max-width: 96% !important;
-	width: 96% !important;
-}
-.table.responsiveContent {
-	/* Content in catalog  occupying full width of cell */
-	height: auto !important;
-	max-width: 96% !important;
-	width: 96% !important;
-}
-.top {
-	/* Header columns occupying full width */
-	height: auto !important;
-	max-width: 100% !important;
-	width: 100% !important;
-}
-.catalog {
-	margin-left: 0%!important;
-}
-button {
-	width: 90%!important;
-}
-}
-</style>
+	
 </head>
-<body yahoo="yahoo">
-<table width="100%"  cellspacing="0" cellpadding="0">
+	<body>
+	<div class="container-sh">
+		<div class="text-center">
+<h1><b>拍手游戏™</b></h1>
+	  
+		<div class="btn-group" role="group">
+		  <button type="button" id="g1" onClick="g1()" class="btn btn-primary">重新开始游戏</button>
+		<button type="button" id="g2" onClick="window.open('https://www.clappinggame.net/')" class="btn btn-primary">拍手游戏官网</button>
+		<button type="button" id="g3" onClick="window.open('https://www.clappinggame.net/docs/')" class="btn btn-primary">拍手游戏教程</button>
+	  </div>
+<p class="text-danger" id="ask">游戏开始</p>
+	  </div>
+		
+<table width="100%" border="1" align="center" class="table-active">
   <tbody>
+	  <tr class="text-primary">
+      <td><p id="sl">胜率100%</p></td>
+      <td><p>胜利：</p></td>
+      <td><p id="aw">0</p></td>
+      <td><p>失败：</p></td>
+      <td><p id="bw">0</p></td>
+      <td><p id="gm">游戏1</p></td>
+    </tr>
     <tr>
-      <td><table width="600"  align="center" cellpadding="0" cellspacing="0">
-          <!-- Main Wrapper Table with initial width set to 60opx -->
-          <tbody>
-            <tr>
-              <td><table bgcolor="#d0cfcf" class="top" width="50%"  align="left" cellpadding="0" cellspacing="0" style="padding:10px 10px 10px 10px;">
-                  <!-- First header column with Logo -->
-                  <tbody>
-                    <tr>
-                      <td style="font-size: 12px; color:#929292; text-align:center; font-family: sans-serif;">www.clappinggame.top</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table bgcolor="#d0cfcf" class="top" width="50%"  align="left" cellpadding="0" cellspacing="0" style="padding:10px 10px 10px 10px; text-align:right">
-                  <!-- Second header column with ISSUE|DATE -->
-                  <tbody>
-                    <tr>
-                      <td style="font-size: 12px; color:#929292; text-align:center; font-family: sans-serif;">拍手游戏H5网页版在线玩</td>
-                    </tr>
-                  </tbody>
-                </table></td>
-            </tr>
-            
-            <tr> 
-              <!-- HTML Spacer row -->
-              <td style="font-size: 0; line-height: 0;" height="20"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
-                  </tr>
-                </table></td>
-            </tr>
-            <tr> 
-              <!-- Introduction area -->
-              <td><table width="96%"  align="left" cellpadding="0" cellspacing="0">
-                  <tr> 
-                    <!-- row container for TITLE/EMAIL THEME -->
-                    <td align="center" style="font-size: 32px; font-weight: 300; line-height: 2.5em; color: #929292; font-family: sans-serif;">拍手游戏</td>
-                  </tr>
-                  <tr> 
-                    <!-- row container for Tagline -->
-                    <td align="center" style="font-size: 16px; font-weight:300; color: #929292; font-family: sans-serif;">clappinggame</td>
-                  </tr>
-                  <tr>
-                    <td style="font-size: 0; line-height: 0;" height="20"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
-                        <tr> 
-                          <!-- HTML Spacer row -->
-                          <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
-                        </tr>
-                      </table></td>
-                  </tr>
-                  <tr> 
-                    <!-- Row container for Intro/ Description -->
-                    <td align="left" style="font-size: 14px; font-style: normal; font-weight: 100; color: #929292; line-height: 1.8; text-align:justify; padding:10px 20px 0px 20px; font-family: sans-serif;">正在开发中，敬请期待。</td>
-                  </tr>
-                </table></td>
-            </tr>
-            <tr> 
-              <!-- HTML Spacer row -->
-              <td style="font-size: 0; line-height: 0;" height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
-                  </tr>
-                </table></td>
-            </tr>
-            <tr>
-              <td><table cellpadding="0" cellspacing="0" align="center" width="84%" style="margin-left:12.5%" class="catalog">
-                  <!-- Table for catalog -->
-                  <tr>
-                    <td >
-                      <table class ="responsive-table" width="48%"  cellspacing="0" cellpadding="0" align="left" style="margin: 10px 0px 10px 0px;">
-                        <!-- Table container for each image and description in catalog -->
-                        <tbody>
-                          <tr>
-                            <td>
-                              <table class="table.responsiveContent" width="66%"  cellspacing="0" cellpadding="0" align="left">
-                                <!-- Table container for content -->
-                                <tbody>
-                                  <tr>
-                                    <td><p style="font-size: 14px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;">返回拍手游戏官网</p>
-                                      <a href="https://www.clappinggame.net" style="text-decoration:none">
-                                      <p style="background-color:#AAAAAA; text-align:center; padding: 10px 10px 10px 10px; margin: 10px 10px 10px 10px;color: #FFFFFF;   font-family: sans-serif; ">www.clappinggame.net</p>
-                                      </a></td>
-                                  </tr>
-                                </tbody>
-                              </table></td>
-                          </tr>
-                        </tbody>
-                      </table></td>
-                  </tr>
-                  <tr>
-                    
-                  </tr>
-                </table></td>
-            </tr>
-            <tr> 
-              <!-- HTML spacer row -->
-              <td style="font-size: 0; line-height: 0;" height="20"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
-                  </tr>
-                </table></td>
-            </tr>
-            <tr bgcolor="#d0cfcf">
-              <td><table class="footer" width="48%"  align="left" cellpadding="0" cellspacing="0">
-                  <!-- First column of footer content -->
-                  <tr>
-                    <td><p align="center"  style="font-size: 22px; font-weight:300; line-height: 2.5em; color: #929292; font-family: sans-serif;">拍手游戏</p>
-                      <p align="center" style="font-size: 12px; color:#929292; text-align:center; font-family: sans-serif;">clappinggame</p></td>
-                  </tr>
-                </table>
-                <table class="footer" width="48%"  align="left" cellpadding="0" cellspacing="0">
-                  <!-- Second column of footer content -->
-                  <tr>
-                    <td><p style="font-size: 14px; font-style: normal; font-weight:normal; color: #ffffff; line-height: 1.8; text-align:justify;padding-top:10px; margin-left:20px; margin-right:20px; font-family: sans-serif;">拍手游戏H5网页版在线玩<br>正在开发中，敬请期待。</p>
-                      <p align="right" style="font-family: sans-serif;"> <a style="color:#929292; text-decoration:none; padding-left:20px; font-size:14px;" href="https://www.clappinggame.net">官网</a> <a style="color:#929292; text-decoration:none; padding-left:20px;  font-size:14px;" href="https://www.clappinggame.net/docs/">教程</a> <a style="color:#929292; text-decoration:none; font-size:14px; padding-left:20px; padding-right:20px; " href="https://www.clappinggame.net/install/">下载离线版(Qt版)</a></p></td>
-                  </tr>
-                </table></td>
-            </tr>
-          </tbody>
-        </table></td>
+      <td><p>电脑</p></td>
+      <td><p>集气：</p></td>
+      <td><p id="bq">0</p></td>
+      <td><p>招式：</p></td>
+      <td><p id="bb">气</p></td>
+      <td><p id="rd">回合1</p></td>
+    </tr>
+    <tr>
+      <td><p>玩家</p></td>
+      <td><p>集气：</p></td>
+      <td><p id="aq">0</p></td>
+      <td><p>招式：</p></td>
+      <td><p id="aa">气</p></td>
+      <td><button type="button" id="ok" onClick="ok()" class="btn btn-success" style="width:100%;">出招</button></td>
+    </tr>
+    <tr>
+      <td><button type="button" id="t000" onclick="c000()" class="btn btn-dark" style="width:100%;">气</button></td>
+      <td><button type="button" id="t100" onclick="c100()" class="btn btn-dark" style="width:100%;">防</button></td>
+      <td><button type="button" id="t101" onclick="c101()" class="btn btn-dark" style="width:100%;">上</button></td>
+      <td><button type="button" id="t102" onclick="c102()" class="btn btn-dark" style="width:100%;">下</button></td>
+      <td><button type="button" id="t103" onclick="c103()" class="btn btn-dark" style="width:100%;">左</button></td>
+      <td><button type="button" id="t104" onclick="c104()" class="btn btn-dark" style="width:100%;">右</button></td>
+    </tr>
+    <tr>
+      <td><button type="button" id="t410" onclick="c410()" class="btn btn-dark" style="width:100%;">枪</button></td>
+      <td><button type="button" id="t420" onclick="c420()" class="btn btn-dark" style="width:100%;">双枪</button></td>
+      <td><button type="button" id="t411" onclick="c411()" class="btn btn-dark" style="width:100%;">上枪</button></td>
+      <td><button type="button" id="t412" onclick="c412()" class="btn btn-dark" style="width:100%;">下枪</button></td>
+      <td><button type="button" id="t413" onclick="c413()" class="btn btn-dark" style="width:100%;">左枪</button></td>
+      <td><button type="button" id="t414" onclick="c414()" class="btn btn-dark" style="width:100%;">右枪</button></td>
+    </tr>
+    <tr>
+      <td><button type="button" id="t520" onclick="c520()" class="btn btn-dark" style="width:100%;">横切</button></td>
+      <td><button type="button" id="t535" onclick="c535()" class="btn btn-dark" style="width:100%;">圆切</button></td>
+      <td><button type="button" id="t521" onclick="c521()" class="btn btn-dark" style="width:100%;">上竖切</button></td>
+      <td><button type="button" id="t522" onclick="c522()" class="btn btn-dark" style="width:100%;">下竖切</button></td>
+      <td><button type="button" id="t180" onclick="c180()" class="btn btn-dark" style="width:100%;">神防</button></td>
+      <td><button type="button" id="t250" onclick="c250()" class="btn btn-dark" style="width:100%;">神反</button></td>
+    </tr>
+    <tr>
+      <td><button type="button" id="t630" onclick="c630()" class="btn btn-dark" style="width:100%;">光</button></td>
+      <td><button type="button" id="t665" onclick="c665()" class="btn btn-dark" style="width:100%;">毁灭</button></td>
+      <td><button type="button" id="t644" onclick="c641()" class="btn btn-dark" style="width:100%;">闪电</button></td>
+      <td><button type="button" id="t642" onclick="c642()" class="btn btn-dark" style="width:100%;">地震</button></td>
+      <td><button type="button" id="ta" class="btn btn-dark" style="width:100%;"> &nbsp;</button></td>
+      <td><button type="button" id="tb" class="btn btn-dark" style="width:100%;"> &nbsp;</button></td>
+    </tr>
+    <tr>
+      <td><button type="button" id="t210" onclick="c210()" class="btn btn-dark" style="width:100%;">一反弹</button></td>
+      <td><button type="button" id="t220" onclick="c220()" class="btn btn-dark" style="width:100%;">二反弹</button></td>
+      <td><button type="button" id="t230" onclick="c230()" class="btn btn-dark" style="width:100%;">三反弹</button></td>
+      <td><button type="button" id="t310" onclick="c310()" class="btn btn-dark" style="width:100%;">一弓箭</button></td>
+      <td><button type="button" id="t320" onclick="c320()" class="btn btn-dark" style="width:100%;">二弓箭</button></td>
+      <td><button type="button" id="t330" onclick="c330()" class="btn btn-dark" style="width:100%;">三弓箭</button></td>
     </tr>
   </tbody>
 </table>
+		<p>拍手游戏™是一种即时战略性心理博弈游戏。它用手势来传达信息，对战方便，可以利用很多碎片化的时间，即开即玩，游戏时间短，甚至可以很多人一起玩甚至远程玩！
+
+此网站是由拍手游戏爱好者开发的免费游戏，由玩家赞助维持服务器费用。本平台目前支持人机对战。
+
+此拍手游戏永久免费、开源，允许玩家方便快捷地安装拍手游戏、免费供各玩家对战。
+
+拍手游戏(Html5网页版)根据 GPLv3 协议开放源代码，开放且自由。
+			访问 GitHub仓库 (<a href="https://github.com/clappinggame/clappinggame">https://github.com/clappinggame/clappinggame</a>) 以获得详细信息。您可以在此处提交建议、反馈问题。</p>
+		<h3>注：目前此版本Bug太多，不计成绩。
+		<br>
+	  请下载拍手游戏客户端体验。</h3>
+	</div>
+	<script src="js/game.js"></script>
 </body>
 </html>
