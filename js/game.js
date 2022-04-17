@@ -1,4 +1,4 @@
-var aa=000,bb=000,aq=0,bq=0,r=0,rd=1,winr=0,dead=0;
+var aa=000,bb=000,aq=0,bq=0,r=0,rd=1,winr=1,dead=0;
 var awin=0,bwin=0,winpa=100,over=0;
 function rnd(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -13,8 +13,8 @@ function t(a)//t=type 0气 1防御 2反 3弓 4攻击
 function c(a)//c=cost
 {
     var b=Math.floor((a/10))%10;
-    if(b==1&&(a/100)==1)b=0;
-    if(b==1&&(a/100)==5)b=3;
+    if(b==1&&Math.floor(a/100)==1)b=0;
+    if(b==1&&Math.floor(a/100)==5)b=3;
     if(a==180)b=1;
     if(a==250)b=0;
     if(a==000)b=-1;
@@ -25,18 +25,18 @@ function a(a)//a=attack
     var b=Math.floor((a/10))%10;
     if(a==100)b=2;
     if(a==180)b=8;
-    if(b==3&&(a/100)==5)b=1;
+    if(b==3&&Math.floor(a/100)==5)b=1;
     return b;
 }
 function d(a)//d=direction 0=中 1~4=上下左右 5=ALL 10=左至右 11上中 12下中 13上中下 14上中左右 15下中左右
 {
     var b=Math.floor((a%100)%10);
-    if((a/100)==5&&b==0) b=10;
-    if((a/100)==5&&b==1) b=11;
-    if((a/100)==5&&b==2) b=12;
-    if((a/100)==6&&b==0) b=13;
-    if((a/100)==6&&b==1) b=14;
-    if((a/100)==6&&b==2) b=15;
+    if(Math.floor(a/100)==5&&b==0) b=10;
+    if(Math.floor(a/100)==5&&b==1) b=11;
+    if(Math.floor(a/100)==5&&b==2) b=12;
+    if(Math.floor(a/100)==6&&b==0) b=13;
+    if(Math.floor(a/100)==6&&b==1) b=14;
+    if(Math.floor(a/100)==6&&b==2) b=15;
     return b;
 }
 
@@ -392,14 +392,15 @@ function ok()
             }
     if(dead>0)
     {
-winr++;
 
-		
-		document.getElementById("gm").innerHTML = "游戏" + winr;
+
+		winr++;
+		//document.getElementById("gm").innerHTML = "游戏" + winr;
 		document.getElementById("aw").innerHTML = awin;
 		document.getElementById("bw").innerHTML = bwin;
 		document.getElementById("sl").innerHTML = "胜率" + Math.round(100*awin/(awin+bwin)) + "%";
 		//document.getElementById("ok").innerHTML = "";
+		
 		over=1;
     }
 }
@@ -571,11 +572,11 @@ function c250()
 }
 function g1()
 {
-
+document.getElementById("gm").innerHTML = "游戏" + winr;
 
         document.getElementById("ask").innerHTML = "游戏重新开始"
-        aq=00;bq=00;rd=1;aa=000;awin=0;bwin=0;winpa=100;r=0;rd=1;winr=0;dead=0;
-        
+        aq=00;bq=00;rd=1;aa=000;r=0;dead=0;
+        //awin=0;bwin=0;winpa=100;winr=0;
 		document.getElementById("rd").innerHTML = "回合" + rd;
 		document.getElementById("aq").innerHTML = "0";
 		document.getElementById("bq").innerHTML = "0";

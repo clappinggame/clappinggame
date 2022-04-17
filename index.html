@@ -3,8 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon"  href="image/logo.png"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clappinggame Html5</title>
+<title>拍手游戏™ Html5</title>
+	<style>
+body{ font-family:"宋体"}
+</style>
 <link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
 
 	
@@ -12,7 +16,8 @@
 	<body>
 	<div class="container-sh">
 		<div class="text-center">
-<h1><b>拍手游戏™</b></h1>
+<h1><b>拍手游戏™ HTML5</b></h1>
+			<h3>www.clappinggame.top</h3>
 	  
 		<div class="btn-group" role="group">
 		  <button type="button" id="g1" onClick="g1()" class="btn btn-primary">重新开始游戏</button>
@@ -21,40 +26,29 @@
 	  </div>
 <p class="text-danger" id="ask">游戏开始</p>
 	  </div>
-		
+      <div class="row" align="center">
+          <div class="col-xl-4"><img src="image/computer.svg" width="64"><h4>电脑</h4><span>集气:</span><span id="bq">0</span><span>  招式:</span><span id="bb">气</span></div>
+          <div class="col-xl-4"><h5 id="gm">游戏1</h5><h3 id="rd">回合1</h3><h5 id="sl">胜率100%</h5></div>
+          <div class="col-xl-4"><img src="image/user.svg" width="64"><h4>玩家</h4><span>集气:</span><span id="aq">0</span><span>  招式:</span><span id="aa">气</span></div>
+      </div>
 <table width="100%" border="1" align="center" class="table-active">
   <tbody>
 	  <tr class="text-primary">
-      <td><p id="sl">胜率100%</p></td>
+      <td></td>
       <td><p>胜利：</p></td>
       <td><p id="aw">0</p></td>
       <td><p>失败：</p></td>
       <td><p id="bw">0</p></td>
-      <td><p id="gm">游戏1</p></td>
+      <td></td>
     </tr>
+    
     <tr>
-      <td><p>电脑</p></td>
-      <td><p>集气：</p></td>
-      <td><p id="bq">0</p></td>
-      <td><p>招式：</p></td>
-      <td><p id="bb">气</p></td>
-      <td><p id="rd">回合1</p></td>
-    </tr>
-    <tr>
-      <td><p>玩家</p></td>
-      <td><p>集气：</p></td>
-      <td><p id="aq">0</p></td>
-      <td><p>招式：</p></td>
-      <td><p id="aa">气</p></td>
-      <td><button type="button" id="ok" onClick="ok()" class="btn btn-success" style="width:100%;">出招</button></td>
-    </tr>
-    <tr>
-      <td><button type="button" id="t000" onclick="c000()" class="btn btn-dark" style="width:100%;">气</button></td>
-      <td><button type="button" id="t100" onclick="c100()" class="btn btn-dark" style="width:100%;">防</button></td>
-      <td><button type="button" id="t101" onclick="c101()" class="btn btn-dark" style="width:100%;">上</button></td>
-      <td><button type="button" id="t102" onclick="c102()" class="btn btn-dark" style="width:100%;">下</button></td>
-      <td><button type="button" id="t103" onclick="c103()" class="btn btn-dark" style="width:100%;">左</button></td>
-      <td><button type="button" id="t104" onclick="c104()" class="btn btn-dark" style="width:100%;">右</button></td>
+      <td><button type="button" id="t000" onclick="c000()" class="btn btn-dark" style="width:100%;"><img src="image/000.svg"> 气</button></td>
+      <td><button type="button" id="t100" onclick="c100()" class="btn btn-dark" style="width:100%;"><img src="image/100.svg"> 防</button></td>
+      <td><button type="button" id="t101" onclick="c101()" class="btn btn-dark" style="width:100%;"><img src="image/101.svg"> 上</button></td>
+      <td><button type="button" id="t102" onclick="c102()" class="btn btn-dark" style="width:100%;"><img src="image/102.svg"> 下</button></td>
+      <td><button type="button" id="t103" onclick="c103()" class="btn btn-dark" style="width:100%;"><img src="image/103.svg"> 左</button></td>
+      <td><button type="button" id="t104" onclick="c104()" class="btn btn-dark" style="width:100%;"><img src="image/104.svg"> 右</button></td>
     </tr>
     <tr>
       <td><button type="button" id="t410" onclick="c410()" class="btn btn-dark" style="width:100%;">枪</button></td>
@@ -64,6 +58,14 @@
       <td><button type="button" id="t413" onclick="c413()" class="btn btn-dark" style="width:100%;">左枪</button></td>
       <td><button type="button" id="t414" onclick="c414()" class="btn btn-dark" style="width:100%;">右枪</button></td>
     </tr>
+	<tr>
+      <td><button type="button" id="t210" onclick="c210()" class="btn btn-dark" style="width:100%;">一反弹</button></td>
+      <td><button type="button" id="t220" onclick="c220()" class="btn btn-dark" style="width:100%;">二反弹</button></td>
+      <td><button type="button" id="t230" onclick="c230()" class="btn btn-dark" style="width:100%;">三反弹</button></td>
+      <td><button type="button" id="t310" onclick="c310()" class="btn btn-dark" style="width:100%;">一弓箭</button></td>
+      <td><button type="button" id="t320" onclick="c320()" class="btn btn-dark" style="width:100%;">二弓箭</button></td>
+      <td><button type="button" id="t330" onclick="c330()" class="btn btn-dark" style="width:100%;">三弓箭</button></td>
+    </tr>
     <tr>
       <td><button type="button" id="t520" onclick="c520()" class="btn btn-dark" style="width:100%;">横切</button></td>
       <td><button type="button" id="t535" onclick="c535()" class="btn btn-dark" style="width:100%;">圆切</button></td>
@@ -72,32 +74,27 @@
       <td><button type="button" id="t180" onclick="c180()" class="btn btn-dark" style="width:100%;">神防</button></td>
       <td><button type="button" id="t250" onclick="c250()" class="btn btn-dark" style="width:100%;">神反</button></td>
     </tr>
+	  
     <tr>
       <td><button type="button" id="t630" onclick="c630()" class="btn btn-dark" style="width:100%;">光</button></td>
       <td><button type="button" id="t665" onclick="c665()" class="btn btn-dark" style="width:100%;">毁灭</button></td>
       <td><button type="button" id="t644" onclick="c641()" class="btn btn-dark" style="width:100%;">闪电</button></td>
       <td><button type="button" id="t642" onclick="c642()" class="btn btn-dark" style="width:100%;">地震</button></td>
-      <td><button type="button" id="ta" class="btn btn-dark" style="width:100%;"> &nbsp;</button></td>
-      <td><button type="button" id="tb" class="btn btn-dark" style="width:100%;"> &nbsp;</button></td>
+      <td><button type="button" id="xno" onClick="" class="btn btn-success" style="width:100%;">&nbsp;</button></td>
+      <td><button type="button" id="ok" onClick="ok()" class="btn btn-success" style="width:100%;">出招</button></td>
     </tr>
-    <tr>
-      <td><button type="button" id="t210" onclick="c210()" class="btn btn-dark" style="width:100%;">一反弹</button></td>
-      <td><button type="button" id="t220" onclick="c220()" class="btn btn-dark" style="width:100%;">二反弹</button></td>
-      <td><button type="button" id="t230" onclick="c230()" class="btn btn-dark" style="width:100%;">三反弹</button></td>
-      <td><button type="button" id="t310" onclick="c310()" class="btn btn-dark" style="width:100%;">一弓箭</button></td>
-      <td><button type="button" id="t320" onclick="c320()" class="btn btn-dark" style="width:100%;">二弓箭</button></td>
-      <td><button type="button" id="t330" onclick="c330()" class="btn btn-dark" style="width:100%;">三弓箭</button></td>
-    </tr>
+    
   </tbody>
 </table>
-		<p>拍手游戏™是一种即时战略性心理博弈游戏。它用手势来传达信息，对战方便，可以利用很多碎片化的时间，即开即玩，游戏时间短，甚至可以很多人一起玩甚至远程玩！
 
-此网站是由拍手游戏爱好者开发的免费游戏，由玩家赞助维持服务器费用。本平台目前支持人机对战。
-
-此拍手游戏永久免费、开源，允许玩家方便快捷地安装拍手游戏、免费供各玩家对战。
-
-拍手游戏(Html5网页版)根据 GPLv3 协议开放源代码，开放且自由。
-			访问 GitHub仓库 (<a href="https://github.com/clappinggame/clappinggame">https://github.com/clappinggame/clappinggame</a>) 以获得详细信息。您可以在此处提交建议、反馈问题。</p>
+<p>拍手游戏™是一种即时战略性心理博弈游戏。它用手势来传达信息，对战方便，可以利用很多碎片化的时间，即开即玩，游戏时间短，甚至可以很多人一起玩甚至远程玩！
+  
+  此网站是由拍手游戏爱好者开发的免费游戏，由玩家赞助维持服务器费用。本平台目前支持人机对战。
+  
+  此拍手游戏永久免费、开源，允许玩家方便快捷地安装拍手游戏、免费供各玩家对战。
+  
+  拍手游戏(Html5网页版)根据 GPLv3 协议开放源代码，开放且自由。
+  访问 GitHub仓库 (<a href="https://github.com/clappinggame/clappinggame">https://github.com/clappinggame/clappinggame</a>) 以获得详细信息。您可以在此处提交建议、反馈问题。</p>
 		<h3>注：目前此版本Bug太多，不计成绩。
 		<br>
 	  请下载拍手游戏客户端体验。</h3>
