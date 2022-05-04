@@ -29,15 +29,15 @@ float: left;
 }
 .container {
   width: 100%;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 0px;
+  padding-left: 0px;
   margin-right: auto;
   margin-left: auto;
 }
 .container-sh {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0px;
+  padding-left: 0px;
 	max-width: 640px;
   margin-right: auto;
   margin-left: auto;
@@ -81,4 +81,30 @@ float: left;
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #212529;
+  text-decoration: none;
+}
+.btn:focus, .btn.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+.btn-success:hover {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-success:focus, .btn-success.focus {
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
 }

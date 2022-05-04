@@ -345,10 +345,10 @@ function ok()
         case 102:document.getElementById("bb").innerHTML = "下";break;
         case 103:document.getElementById("bb").innerHTML = "左";break;
         case 104:document.getElementById("bb").innerHTML = "右";break;
-        case 210:document.getElementById("bb").innerHTML = "一反";break;
+        case 210:document.getElementById("bb").innerHTML = "反";break;
         case 220:document.getElementById("bb").innerHTML = "二反";break;
         case 230:document.getElementById("bb").innerHTML = "三反";break;
-        case 310:document.getElementById("bb").innerHTML = "一弓";break;
+        case 310:document.getElementById("bb").innerHTML = "弓";break;
         case 320:document.getElementById("bb").innerHTML = "二弓";break;
         case 330:document.getElementById("bb").innerHTML = "三弓";break;
         case 410:document.getElementById("bb").innerHTML = "枪";break;
@@ -358,8 +358,8 @@ function ok()
         case 413:document.getElementById("bb").innerHTML = "左枪";break;
         case 414:document.getElementById("bb").innerHTML = "右枪";break;
         case 520:document.getElementById("bb").innerHTML = "横切";break;
-        case 521:document.getElementById("bb").innerHTML = "上竖切";break;
-        case 522:document.getElementById("bb").innerHTML = "下竖切";break;
+        case 521:document.getElementById("bb").innerHTML = "上切";break;
+        case 522:document.getElementById("bb").innerHTML = "下切";break;
         case 535:document.getElementById("bb").innerHTML = "圆切";break;
         case 630:document.getElementById("bb").innerHTML = "光";break;
         case 641:document.getElementById("bb").innerHTML = "闪电";break;
@@ -486,13 +486,13 @@ function c520()
 function c521()
 {if(over==1)return;
     aa=521;
-    document.getElementById("aa").innerHTML = "上竖切";
+    document.getElementById("aa").innerHTML = "上切";
 }
 
 function c522()
 {if(over==1)return;
     aa=522;
-    document.getElementById("aa").innerHTML = "下竖切";
+    document.getElementById("aa").innerHTML = "下切";
 }
 
 function c535()
@@ -527,7 +527,7 @@ function c655()
 function c210()
 {if(over==1)return;
     aa=210;
-    document.getElementById("aa").innerHTML = "一反";
+    document.getElementById("aa").innerHTML = "反";
 }
 
 function c220()
@@ -545,7 +545,7 @@ function c230()
 function c310()
 {if(over==1)return;
     aa=310;
-    document.getElementById("aa").innerHTML = "一弓";
+    document.getElementById("aa").innerHTML = "弓";
 }
 
 function c320()
