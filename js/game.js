@@ -330,9 +330,19 @@ function pc()//电脑自动
     }
 
 }
-
+var counter = 0;
+function countdown(){
+    document.getElementById("time").innerHTML = counter;
+    counter++;
+}
+setInterval(countdown,1000);
+countdown();
 function ok()
 {
+	counter = 0;
+	    
+	clearInterval(counter);
+	
 	if(over==1)return;
     ++rd;
 	document.getElementById("rd").innerHTML = "回合" + rd;
@@ -403,6 +413,12 @@ function ok()
 		
 		over=1;
     }
+	else
+	{
+		
+		countdown();
+	}
+	
 }
 
 function c000()
@@ -585,3 +601,5 @@ document.getElementById("gm").innerHTML = "游戏" + winr;
     over=0;
 
 }
+
+

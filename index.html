@@ -37,59 +37,67 @@ float: left;
 		  <button type="button" id="g1" onClick="g1()" class="btn btn-primary">重新开始游戏</button>
 		<button type="button" id="g2" onClick="window.open('https://www.clappinggame.net/')" class="btn btn-primary">拍手游戏官网</button>
 		<button type="button" id="g3" onClick="window.open('https://www.clappinggame.net/docs/')" class="btn btn-primary">拍手游戏教程</button>
+<hr>
 
 <p id="ask">游戏开始</p>
 			<h5 id="gm">游戏1</h5><h3 id="rd">回合1</h3><h5 id="sl">胜率100%</h5> <span>胜利:</span><span id="aw">0</span><span>  失败:</span><span id="bw">0</span>
 	  </div>
  <div class="container text-center">     
-      <div class="left1">  <img src="image/user.svg" width="64"><h4>玩家</h4><span>集气:</span><span id="aq">0</span><span>  招式:</span><span id="aa">气</span></div>
+      <div class="left1">  <img src="image/user.svg" width="64"><h3>玩家</h3><span>气:</span><span id="aq">0</span><span>  招式:</span><span style="font-size: xx-large" id="aa">气</span></div>
  
-      <div class="right1">  <img src="image/computer.svg" width="64"><h4>电脑</h4><span>集气:</span><span id="bq">0</span><span>  招式:</span><span id="bb">气</span> </div>
+      <div class="right1">  <img src="image/computer.svg" width="64"><h3>电脑</h3><span>气:</span><span id="bq">0</span><span>  招式:</span><span style="font-size: xx-large" id="bb">气</span> </div>
   </div>
-<div class="container text-center">     
+<center><span>回合用时:</span><span id="time">0</span></center>
+		<hr>
+<div class="container text-center">
+	<button type="button" id="ok" onClick="ok()" class="btn btn-success" style="width:22%;">出招</button>
 <br>
-      <button type="button" id="t000" onclick="c000()" class="btn btn-dark" ><img src="image/000.svg"> 气</button>
-      <button type="button" id="t100" onclick="c100()" class="btn btn-dark" ><img src="image/100.svg"> 防</button>
-      <button type="button" id="t101" onclick="c101()" class="btn btn-dark" ><img src="image/101.svg"> 上</button>
-      <button type="button" id="t102" onclick="c102()" class="btn btn-dark" ><img src="image/102.svg"> 下</button>
-      <button type="button" id="t103" onclick="c103()" class="btn btn-dark" ><img src="image/103.svg"> 左</button>
-      <button type="button" id="t104" onclick="c104()" class="btn btn-dark" ><img src="image/104.svg"> 右</button>
-<br>    
-      <button type="button" id="t410" onclick="c410()" class="btn btn-dark" >单枪</button>
-      <button type="button" id="t420" onclick="c420()" class="btn btn-dark" >双枪</button>
-      <button type="button" id="t411" onclick="c411()" class="btn btn-dark" >上枪</button>
-      <button type="button" id="t412" onclick="c412()" class="btn btn-dark" >下枪</button>
-      <button type="button" id="t413" onclick="c413()" class="btn btn-dark" >左枪</button>
-      <button type="button" id="t414" onclick="c414()" class="btn btn-dark" >右枪</button>
-<br>    
-      <button type="button" id="t210" onclick="c210()" class="btn btn-dark" >反弹</button>
-      <button type="button" id="t220" onclick="c220()" class="btn btn-dark" >二反</button>
-      <button type="button" id="t230" onclick="c230()" class="btn btn-dark" >三反</button>
-      <button type="button" id="t310" onclick="c310()" class="btn btn-dark" >弓箭</button>
-      <button type="button" id="t320" onclick="c320()" class="btn btn-dark" >二弓</button>
-      <button type="button" id="t330" onclick="c330()" class="btn btn-dark" >三弓</button>
+      <button type="button" id="t000" onclick="c000()" class="btn btn-dark" style="width:22%;"><img src="image/000.svg"> 气</button>
+      <button type="button" id="t100" onclick="c100()" class="btn btn-dark" style="width:22%;"><img src="image/100.svg"> 防</button>
+	  <button type="button" id="t410" onclick="c410()" class="btn btn-dark" style="width:22%;">单枪</button>
+      <button type="button" id="t420" onclick="c420()" class="btn btn-dark" style="width:22%;">双枪</button>
+<br>
+	  <button type="button" id="t103" onclick="c103()" class="btn btn-dark" style="width:22%;"><img src="image/103.svg"> 左</button>
+      <button type="button" id="t104" onclick="c104()" class="btn btn-dark" style="width:22%;"><img src="image/104.svg"> 右</button>
+      <button type="button" id="t101" onclick="c101()" class="btn btn-dark" style="width:22%;"><img src="image/101.svg"> 上</button>
+      <button type="button" id="t102" onclick="c102()" class="btn btn-dark" style="width:22%;"><img src="image/102.svg"> 下</button>
+<br>
+      <button type="button" id="t413" onclick="c413()" class="btn btn-dark" style="width:22%;">左枪</button>
+      <button type="button" id="t414" onclick="c414()" class="btn btn-dark" style="width:22%;">右枪</button>
+      <button type="button" id="t411" onclick="c411()" class="btn btn-dark" style="width:22%;">上枪</button>
+      <button type="button" id="t412" onclick="c412()" class="btn btn-dark" style="width:22%;">下枪</button>
+
 <br>   
-      <button type="button" id="t520" onclick="c520()" class="btn btn-dark" >横切</button>
-      <button type="button" id="t535" onclick="c535()" class="btn btn-dark" >圆切</button>
-      <button type="button" id="t521" onclick="c521()" class="btn btn-dark" >上切</button>
-      <button type="button" id="t522" onclick="c522()" class="btn btn-dark" >下切</button>
-      <button type="button" id="t180" onclick="c180()" class="btn btn-dark" >神防</button>
-      <button type="button" id="t250" onclick="c250()" class="btn btn-dark" >神反</button>
+      <button type="button" id="t520" onclick="c520()" class="btn btn-dark" style="width:22%;">横切</button>
+      <button type="button" id="t535" onclick="c535()" class="btn btn-dark" style="width:22%;">圆切</button>
+      <button type="button" id="t521" onclick="c521()" class="btn btn-dark" style="width:22%;">上切</button>
+      <button type="button" id="t522" onclick="c522()" class="btn btn-dark" style="width:22%;">下切</button>
 <br>    
-      <button type="button" id="t630" onclick="c630()" class="btn btn-dark" >激光</button>
-      <button type="button" id="t665" onclick="c665()" class="btn btn-dark" >毁灭</button>
-      <button type="button" id="t644" onclick="c641()" class="btn btn-dark" >闪电</button>
-      <button type="button" id="t642" onclick="c642()" class="btn btn-dark" >地震</button>
-      <button type="button" id="ok" onClick="ok()" class="btn btn-success" >出招</button>
-</div>     
-
-
+      <button type="button" id="t630" onclick="c630()" class="btn btn-dark" style="width:22%;">激光</button>
+      <button type="button" id="t665" onclick="c665()" class="btn btn-dark" style="width:22%;">毁灭</button>
+      <button type="button" id="t644" onclick="c641()" class="btn btn-dark" style="width:22%;">闪电</button>
+      <button type="button" id="t642" onclick="c642()" class="btn btn-dark" style="width:22%;">地震</button>
+      
+<br>    
+      <button type="button" id="t210" onclick="c210()" class="btn btn-dark" style="width:22%;">反弹</button>
+      <button type="button" id="t220" onclick="c220()" class="btn btn-dark" style="width:22%;">二反</button>
+      <button type="button" id="t230" onclick="c230()" class="btn btn-dark" style="width:22%;">三反</button>
+	  <button type="button" id="t250" onclick="c250()" class="btn btn-dark" style="width:22%;">神反</button>
+<br>
+      <button type="button" id="t310" onclick="c310()" class="btn btn-dark" style="width:22%;">弓箭</button>
+      <button type="button" id="t320" onclick="c320()" class="btn btn-dark" style="width:22%;">二弓</button>
+      <button type="button" id="t330" onclick="c330()" class="btn btn-dark" style="width:22%;">三弓</button>
+      <button type="button" id="t180" onclick="c180()" class="btn btn-dark" style="width:22%;">神防</button>
+</div>  
+<hr>
 <p>
   拍手游戏(Html5网页版)根据 GPLv3 协议开放源代码，开放且自由。<br>
-  访问 GitHub仓库 (<a href="https://github.com/clappinggame/clappinggame">https://github.com/clappinggame/clappinggame</a>) 以获得详细信息。您可以在此处提交建议、反馈问题。
+  访问 <a href="https://github.com/clappinggame/clappinggame">GitHub仓库</a> 以获得详细信息。您可以在此处提交建议、反馈问题。
 		<!--1234567890游戏重新开始你爆气了！你胜利失败了！--></p>
-		
+		<h4>Copyright © Clappingame . All rights reserved .</h4>
+		<h4>Powered by <a href="https://www.clappinggame.top">Clappingame</a> .</h4>
 	</div>
+
 	<script src="js/game.js"></script>
 </body>
 </html>
