@@ -1,8 +1,8 @@
 {
     "version": 2,
-    "routes": [
+    "redirects": [
       { "handle": "filesystem" },
-      { "src": "/(.*)", "status": 404, "dest": "index.html" }
+      { "source": "/(.*)", "status": 404, "destination": "https://www.clappinggame.top" }
     ]
   }
   
