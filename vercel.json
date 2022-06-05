@@ -1,7 +1,5 @@
 {
-    "version": 2,
     "redirects": [
-      { "handle": "filesystem" },
       { "source": "/(.*)", "status": 404, "destination": "https://www.clappinggame.top", "permanent": true }
     ]
   }
