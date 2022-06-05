@@ -1,9 +1,13 @@
-
 {
-  "trailingSlash": false ,
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/github", "status": 307, "dest": "https://github.com/clappinggame" },
-    { "src": "/(.*)", "status": 404, "dest": "/index.html" },
-  ]
+    "version": 2,
+    "routes": [
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/(.*)",
+            "status": 404,
+            "dest": "/"
+        }
+    ]
 }
