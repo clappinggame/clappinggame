@@ -1,7 +1,7 @@
 {
     "trailingSlash": false ,
     "redirects": [
-      { "source": "/(.*)", "destination": "https://www.clappinggame.top", "permanent": true , "statusCode": 404 }
+      { "source": "/(.*)", "destination": "https://www.clappinggame.top" , "statusCode": 404 }
     ]
   }
   
