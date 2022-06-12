@@ -1,8 +1,37 @@
 var aa=000,bb=000,aq=0,bq=0,r=0,rd=1,winr=1,dead=0;
 var awin=0,bwin=0,winpa=100,over=0;
+var bt000=document.getElementById("t000");
+var bt100=document.getElementById("t100");
+var bt101=document.getElementById("t101");
+var bt102=document.getElementById("t102");
+var bt103=document.getElementById("t103");
+var bt104=document.getElementById("t104");
+var bt210=document.getElementById("t210");
+var bt220=document.getElementById("t220");
+var bt230=document.getElementById("t230");
+var bt310=document.getElementById("t310");
+var bt320=document.getElementById("t320");
+var bt330=document.getElementById("t330");
+var bt410=document.getElementById("t410");
+var bt411=document.getElementById("t411");
+var bt412=document.getElementById("t412");
+var bt413=document.getElementById("t413");
+var bt414=document.getElementById("t414");
+var bt520=document.getElementById("t520");
+var bt521=document.getElementById("t521");
+var bt522=document.getElementById("t522");
+var bt535=document.getElementById("t535");
+var bt630=document.getElementById("t630");
+var bt641=document.getElementById("t641");
+var bt642=document.getElementById("t642");
+var bt655=document.getElementById("t655");
+var bt180=document.getElementById("t180");
+var bt250=document.getElementById("t250");
+var bt420=document.getElementById("t420");
 function rnd(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
+
 //cg判断区
 function t(a)//t=type 0气 1防御 2反 3弓 4攻击
 {
@@ -330,19 +359,229 @@ function pc()//电脑自动
     }
 
 }
-var counter = 0;
-function countdown(){
-    document.getElementById("time").innerHTML = counter;
-    counter++;
+
+function colorit(it)
+{
+		if(aq>=5)
+		{
+			bt655.className = "btn btn-primary";
+			bt641.className = "btn btn-primary";
+			bt642.className = "btn btn-primary";
+			bt630.className = "btn btn-primary";
+			bt230.className = "btn btn-primary";
+			bt330.className = "btn btn-primary";
+			bt535.className = "btn btn-primary";
+			bt420.className = "btn btn-primary";
+			bt520.className = "btn btn-primary";
+			bt521.className = "btn btn-primary";
+			bt522.className = "btn btn-primary";
+			bt220.className = "btn btn-primary";
+			bt320.className = "btn btn-primary";
+			bt410.className = "btn btn-primary";
+			bt411.className = "btn btn-primary";
+			bt412.className = "btn btn-primary";
+			bt413.className = "btn btn-primary";
+			bt414.className = "btn btn-primary";
+			bt210.className = "btn btn-primary";
+			bt310.className = "btn btn-primary";
+			bt180.className = "btn btn-primary";
+			bt000.className = "btn btn-primary";
+			bt100.className = "btn btn-primary";
+			bt101.className = "btn btn-primary";
+			bt102.className = "btn btn-primary";
+			bt103.className = "btn btn-primary";
+			bt104.className = "btn btn-primary";
+			bt250.className = "btn btn-primary";
+		}
+	else if(aq==4)
+		{
+			bt655.className = "btn btn-dark";
+			bt641.className = "btn btn-primary";
+			bt642.className = "btn btn-primary";
+			bt630.className = "btn btn-primary";
+			bt230.className = "btn btn-primary";
+			bt330.className = "btn btn-primary";
+			bt535.className = "btn btn-primary";
+			bt420.className = "btn btn-primary";
+			bt520.className = "btn btn-primary";
+			bt521.className = "btn btn-primary";
+			bt522.className = "btn btn-primary";
+			bt220.className = "btn btn-primary";
+			bt320.className = "btn btn-primary";
+			bt410.className = "btn btn-primary";
+			bt411.className = "btn btn-primary";
+			bt412.className = "btn btn-primary";
+			bt413.className = "btn btn-primary";
+			bt414.className = "btn btn-primary";
+			bt210.className = "btn btn-primary";
+			bt310.className = "btn btn-primary";
+			bt180.className = "btn btn-primary";
+			bt000.className = "btn btn-primary";
+			bt100.className = "btn btn-primary";
+			bt101.className = "btn btn-primary";
+			bt102.className = "btn btn-primary";
+			bt103.className = "btn btn-primary";
+			bt104.className = "btn btn-primary";
+			bt250.className = "btn btn-primary";
+		}
+	else if(aq==3)
+		{
+			bt655.className = "btn btn-dark";
+			bt641.className = "btn btn-dark";
+			bt642.className = "btn btn-dark";
+			bt630.className = "btn btn-primary";
+			bt230.className = "btn btn-primary";
+			bt330.className = "btn btn-primary";
+			bt535.className = "btn btn-primary";
+			bt420.className = "btn btn-primary";
+			bt520.className = "btn btn-primary";
+			bt521.className = "btn btn-primary";
+			bt522.className = "btn btn-primary";
+			bt220.className = "btn btn-primary";
+			bt320.className = "btn btn-primary";
+			bt410.className = "btn btn-primary";
+			bt411.className = "btn btn-primary";
+			bt412.className = "btn btn-primary";
+			bt413.className = "btn btn-primary";
+			bt414.className = "btn btn-primary";
+			bt210.className = "btn btn-primary";
+			bt310.className = "btn btn-primary";
+			bt180.className = "btn btn-primary";
+			bt000.className = "btn btn-primary";
+			bt100.className = "btn btn-primary";
+			bt101.className = "btn btn-primary";
+			bt102.className = "btn btn-primary";
+			bt103.className = "btn btn-primary";
+			bt104.className = "btn btn-primary";
+			bt250.className = "btn btn-primary";
+		}
+	else if(aq==2)
+		{
+			bt655.className = "btn btn-dark";
+			bt641.className = "btn btn-dark";
+			bt642.className = "btn btn-dark";
+			bt630.className = "btn btn-dark";
+			bt230.className = "btn btn-dark";
+			bt330.className = "btn btn-dark";
+			bt535.className = "btn btn-dark";
+			bt420.className = "btn btn-primary";
+			bt520.className = "btn btn-primary";
+			bt521.className = "btn btn-primary";
+			bt522.className = "btn btn-primary";
+			bt220.className = "btn btn-primary";
+			bt320.className = "btn btn-primary";
+			bt410.className = "btn btn-primary";
+			bt411.className = "btn btn-primary";
+			bt412.className = "btn btn-primary";
+			bt413.className = "btn btn-primary";
+			bt414.className = "btn btn-primary";
+			bt210.className = "btn btn-primary";
+			bt310.className = "btn btn-primary";
+			bt180.className = "btn btn-primary";
+			bt000.className = "btn btn-primary";
+			bt100.className = "btn btn-primary";
+			bt101.className = "btn btn-primary";
+			bt102.className = "btn btn-primary";
+			bt103.className = "btn btn-primary";
+			bt104.className = "btn btn-primary";
+			bt250.className = "btn btn-primary";
+		}
+	else if(aq==1)
+		{
+			bt655.className = "btn btn-dark";
+			bt641.className = "btn btn-dark";
+			bt642.className = "btn btn-dark";
+			bt630.className = "btn btn-dark";
+			bt230.className = "btn btn-dark";
+			bt330.className = "btn btn-dark";
+			bt535.className = "btn btn-dark";
+			bt420.className = "btn btn-dark";
+			bt520.className = "btn btn-dark";
+			bt521.className = "btn btn-dark";
+			bt522.className = "btn btn-dark";
+			bt220.className = "btn btn-dark";
+			bt320.className = "btn btn-dark";
+			bt410.className = "btn btn-primary";
+			bt411.className = "btn btn-primary";
+			bt412.className = "btn btn-primary";
+			bt413.className = "btn btn-primary";
+			bt414.className = "btn btn-primary";
+			bt210.className = "btn btn-primary";
+			bt310.className = "btn btn-primary";
+			bt180.className = "btn btn-primary";
+			bt000.className = "btn btn-primary";
+			bt100.className = "btn btn-primary";
+			bt101.className = "btn btn-primary";
+			bt102.className = "btn btn-primary";
+			bt103.className = "btn btn-primary";
+			bt104.className = "btn btn-primary";
+			bt250.className = "btn btn-primary";
+		}
+	else
+	
+	{
+			bt655.className = "btn btn-dark";
+			bt641.className = "btn btn-dark";
+			bt642.className = "btn btn-dark";
+			bt630.className = "btn btn-dark";
+			bt230.className = "btn btn-dark";
+			bt330.className = "btn btn-dark";
+			bt535.className = "btn btn-dark";
+			bt420.className = "btn btn-dark";
+			bt520.className = "btn btn-dark";
+			bt521.className = "btn btn-dark";
+			bt522.className = "btn btn-dark";
+			bt220.className = "btn btn-dark";
+			bt320.className = "btn btn-dark";
+			bt410.className = "btn btn-dark";
+			bt411.className = "btn btn-dark";
+			bt412.className = "btn btn-dark";
+			bt413.className = "btn btn-dark";
+			bt414.className = "btn btn-dark";
+			bt210.className = "btn btn-dark";
+			bt310.className = "btn btn-dark";
+			bt180.className = "btn btn-dark";
+			bt000.className = "btn btn-primary";
+			bt100.className = "btn btn-primary";
+			bt101.className = "btn btn-primary";
+			bt102.className = "btn btn-primary";
+			bt103.className = "btn btn-primary";
+			bt104.className = "btn btn-primary";
+			bt250.className = "btn btn-primary";
+	}
+	
+	if(it==000)bt000.className = "btn btn-success";
+	else if(it==100)bt100.className = "btn btn-success";
+	else if(it==101)bt101.className = "btn btn-success";
+	else if(it==102)bt102.className = "btn btn-success";
+	else if(it==103)bt103.className = "btn btn-success";
+	else if(it==104)bt104.className = "btn btn-success";
+	else if(it==210)bt210.className = "btn btn-success";
+	else if(it==220)bt220.className = "btn btn-success";
+	else if(it==230)bt230.className = "btn btn-success";
+	else if(it==310)bt310.className = "btn btn-success";
+	else if(it==320)bt320.className = "btn btn-success";
+	else if(it==330)bt330.className = "btn btn-success";
+	else if(it==410)bt410.className = "btn btn-success";
+	else if(it==420)bt420.className = "btn btn-success";
+	else if(it==411)bt411.className = "btn btn-success";
+	else if(it==412)bt412.className = "btn btn-success";
+	else if(it==413)bt413.className = "btn btn-success";
+	else if(it==414)bt414.className = "btn btn-success";
+	else if(it==520)bt520.className = "btn btn-success";
+	else if(it==521)bt521.className = "btn btn-success";
+	else if(it==522)bt522.className = "btn btn-success";
+	else if(it==535)bt535.className = "btn btn-success";
+	else if(it==630)bt630.className = "btn btn-success";
+	else if(it==641)bt641.className = "btn btn-success";
+	else if(it==642)bt642.className = "btn btn-success";
+	else if(it==655)bt655.className = "btn btn-success";
+	else if(it==180)bt180.className = "btn btn-success";
+	else if(it==250)bt250.className = "btn btn-success";
 }
-setInterval(countdown,1000);
-countdown();
+colorit(0);
 function ok()
 {
-	counter = 0;
-	    
-	clearInterval(counter);
-	
 	if(over==1)return;
     ++rd;
 	document.getElementById("rd").innerHTML = "回合" + rd;
@@ -382,6 +621,10 @@ function ok()
     dead=pan(aa,bb);
     document.getElementById("aq").innerHTML = aq;
     document.getElementById("bq").innerHTML = bq;
+	//color
+	colorit(aa);
+
+	
     if(dead==0){//QMessageBox::about(this, "平局！", "平局！");
             }
             else if(dead==1){document.getElementById("ask").innerHTML = "你胜利了！";
@@ -413,178 +656,173 @@ function ok()
 		
 		over=1;
     }
-	else
-	{
-		
-		countdown();
-	}
 	
 }
 
 function c000()
 {if(over==1)return;
     aa=000;
-    document.getElementById("aa").innerHTML = "气";
+    document.getElementById("aa").innerHTML = "气";colorit(000);
 }
 
 function c100()
 {if(over==1)return;
     aa=100;
-    document.getElementById("aa").innerHTML = "防";
+    document.getElementById("aa").innerHTML = "防";colorit(100);
 }
 
 function c101()
 {if(over==1)return;
     aa=101;
-    document.getElementById("aa").innerHTML = "上";
+    document.getElementById("aa").innerHTML = "上";colorit(101);
 }
 
 function c102()
 {if(over==1)return;
     aa=102;
-    document.getElementById("aa").innerHTML = "下";
+    document.getElementById("aa").innerHTML = "下";colorit(102);
 }
 
 function c103()
 {if(over==1)return;
     aa=103;
-    document.getElementById("aa").innerHTML = "左";
+    document.getElementById("aa").innerHTML = "左";colorit(103);
 }
 
 function c104()
 {if(over==1)return;
     aa=104;
-    document.getElementById("aa").innerHTML = "右";
+    document.getElementById("aa").innerHTML = "右";colorit(104);
 }
 
 function c410()
 {if(over==1)return;
     aa=410;
-    document.getElementById("aa").innerHTML = "枪";
+    document.getElementById("aa").innerHTML = "枪";colorit(410);
 }
 
 function c420()
 {if(over==1)return;
     aa=420;
-    document.getElementById("aa").innerHTML = "双枪";
+    document.getElementById("aa").innerHTML = "双枪";colorit(420);
 }
 
 function c411()
 {if(over==1)return;
     aa=411;
-    document.getElementById("aa").innerHTML = "上枪";
+    document.getElementById("aa").innerHTML = "上枪";colorit(411);
 }
 
 function c412()
 {if(over==1)return;
     aa=412;
-    document.getElementById("aa").innerHTML = "下枪";
+    document.getElementById("aa").innerHTML = "下枪";colorit(412);
 }
 
 function c413()
 {if(over==1)return;
     aa=413;
-    document.getElementById("aa").innerHTML = "左枪";
+    document.getElementById("aa").innerHTML = "左枪";colorit(413);
 }
 
 function c414()
 {if(over==1)return;
     aa=414;
-    document.getElementById("aa").innerHTML = "右枪";
+    document.getElementById("aa").innerHTML = "右枪";colorit(414);
 }
 
 function c520()
 {if(over==1)return;
     aa=520;
-    document.getElementById("aa").innerHTML = "横切";
+    document.getElementById("aa").innerHTML = "横切";colorit(520);
 }
 
 function c521()
 {if(over==1)return;
     aa=521;
-    document.getElementById("aa").innerHTML = "上切";
+    document.getElementById("aa").innerHTML = "上切";colorit(521);
 }
 
 function c522()
 {if(over==1)return;
     aa=522;
-    document.getElementById("aa").innerHTML = "下切";
+    document.getElementById("aa").innerHTML = "下切";colorit(522);
 }
 
 function c535()
 {if(over==1)return;
     aa=535;
-    document.getElementById("aa").innerHTML = "圆切";
+    document.getElementById("aa").innerHTML = "圆切";colorit(535);
 }
 
 function c630()
 {if(over==1)return;
     aa=630;
-    document.getElementById("aa").innerHTML = "光";
+    document.getElementById("aa").innerHTML = "光";colorit(630);
 }
 
 function c641()
 {if(over==1)return;
     aa=641;
-    document.getElementById("aa").innerHTML = "闪电";
+    document.getElementById("aa").innerHTML = "闪电";colorit(641);
 }
 
 function c642()
 {if(over==1)return;
     aa=642;
-    document.getElementById("aa").innerHTML = "地震";
+    document.getElementById("aa").innerHTML = "地震";colorit(642);
 }
 function c655()
 {if(over==1)return;
     aa=655;
-    document.getElementById("aa").innerHTML = "毁灭";
+    document.getElementById("aa").innerHTML = "毁灭";colorit(655);
 }
 
 function c210()
 {if(over==1)return;
     aa=210;
-    document.getElementById("aa").innerHTML = "反";
+    document.getElementById("aa").innerHTML = "反";colorit(210);
 }
 
 function c220()
 {if(over==1)return;
     aa=220;
-    document.getElementById("aa").innerHTML = "二反";
+    document.getElementById("aa").innerHTML = "二反";colorit(220);
 }
 
 function c230()
 {if(over==1)return;
     aa=230;
-    document.getElementById("aa").innerHTML = "三反";
+    document.getElementById("aa").innerHTML = "三反";colorit(230);
 }
 
 function c310()
 {if(over==1)return;
     aa=310;
-    document.getElementById("aa").innerHTML = "弓";
+    document.getElementById("aa").innerHTML = "弓";colorit(310);
 }
 
 function c320()
 {if(over==1)return;
     aa=320;
-    document.getElementById("aa").innerHTML = "二弓";
+    document.getElementById("aa").innerHTML = "二弓";colorit(320);
 }
 
 function c330()
 {if(over==1)return;
     aa=330;
-    document.getElementById("aa").innerHTML = "三弓";
+    document.getElementById("aa").innerHTML = "三弓";colorit(330);
 }
 function c180()
 {if(over==1)return;
     aa=180;
-    document.getElementById("aa").innerHTML = "神防";
+    document.getElementById("aa").innerHTML = "神防";colorit(180);
 }
 
 function c250()
 {if(over==1)return;
     aa=250;
-    document.getElementById("aa").innerHTML = "神反";
+    document.getElementById("aa").innerHTML = "神反";colorit(250);
 }
 function g1()
 {
@@ -598,8 +836,6 @@ document.getElementById("gm").innerHTML = "游戏" + winr;
 		document.getElementById("bq").innerHTML = "0";
 		document.getElementById("aa").innerHTML = "气";
 		document.getElementById("bb").innerHTML = "气";
-    over=0;
+    over=0;colorit(aa);
 
 }
-
-
