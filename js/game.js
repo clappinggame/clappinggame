@@ -158,16 +158,22 @@ function pan(y,b)
     }
         else if(t(y)>=4&&t(b)==3)//我方攻击对方弓
     {
-        if (a(y)>=a(b)) return 1;
-        else if (a(y)<a(b)) return 2;
-        else return 0;
+		if (d(y)==0||d(y)>=5)
+			{
+				if (a(y)>=a(b)) return 1;
+                else if (a(y)<a(b)) return 2;
+			}
+        
+        else return 2;
     }
     else if(t(y)==3&&t(b)>=4)//我方弓对方攻击
     {
-
-        if (a(y)>a(b)) return 1;
-        else if (a(y)<=a(b)) return 2;
-        else return 0;
+		if (d(b)==0||d(b)>=5)
+			{
+				if (a(y)>a(b)) return 1;
+                else if (a(y)<=a(b)) return 2;
+			}
+        else return 1;
     }
     else if(t(y)==3&&t(b)==2)//我方弓对方反
     {
@@ -622,25 +628,28 @@ function ok()
     document.getElementById("aq").innerHTML = aq;
     document.getElementById("bq").innerHTML = bq;
 	//color
+	if (c(aa)>aq)
+	aa=000;
 	colorit(aa);
 
 	
-    if(dead==0){//QMessageBox::about(this, "平局！", "平局！");
+    if(dead==0){document.getElementById("timer").innerHTML = "平局";
+				setTimeout("okok()", 1500);
             }
-            else if(dead==1){document.getElementById("ask").innerHTML = "你胜利了！";
+            else if(dead==1){document.getElementById("timer").innerHTML = "你胜利了";
             awin++;
             }
-            else if(dead==2){document.getElementById("ask").innerHTML = "你失败了！";
+            else if(dead==2){document.getElementById("timer").innerHTML = "你失败了";
             bwin++;
             }
-            else if(dead==3){document.getElementById("ask").innerHTML = "平局！";
+            else if(dead==3){document.getElementById("timer").innerHTML = "平局！";
             }
-            else if(dead==7){document.getElementById("ask").innerHTML = "双方都爆气了！";
+            else if(dead==7){document.getElementById("timer").innerHTML = "双方都爆气了！";
             }
-            else if(dead==8){document.getElementById("ask").innerHTML = "你爆气了！";
+            else if(dead==8){document.getElementById("timer").innerHTML = "你爆气了！";
             bwin++;
             }
-            else if(dead==9){document.getElementById("ask").innerHTML = "对方爆气了！";
+            else if(dead==9){document.getElementById("timer").innerHTML = "对方爆气了！";
             awin++;
             }
     if(dead>0)
@@ -655,6 +664,9 @@ function ok()
 		//document.getElementById("ok").innerHTML = "";
 		
 		over=1;
+		document.getElementById("board").style.display="none";
+		document.getElementById("menu").style.display="block";
+		document.getElementById("ask").innerHTML = "游戏结束";
     }
 	
 }
@@ -696,125 +708,125 @@ function c104()
 }
 
 function c410()
-{if(over==1)return;
+{if(over==1)return;if(aq<1)return;
     aa=410;
     document.getElementById("aa").innerHTML = "枪";colorit(410);
 }
 
 function c420()
-{if(over==1)return;
+{if(over==1)return;if(aq<2)return;
     aa=420;
     document.getElementById("aa").innerHTML = "双枪";colorit(420);
 }
 
 function c411()
-{if(over==1)return;
+{if(over==1)return;if(aq<1)return;
     aa=411;
     document.getElementById("aa").innerHTML = "上枪";colorit(411);
 }
 
 function c412()
-{if(over==1)return;
+{if(over==1)return;if(aq<1)return;
     aa=412;
     document.getElementById("aa").innerHTML = "下枪";colorit(412);
 }
 
 function c413()
-{if(over==1)return;
+{if(over==1)return;if(aq<1)return;
     aa=413;
     document.getElementById("aa").innerHTML = "左枪";colorit(413);
 }
 
 function c414()
-{if(over==1)return;
+{if(over==1)return;if(aq<1)return;
     aa=414;
     document.getElementById("aa").innerHTML = "右枪";colorit(414);
 }
 
 function c520()
-{if(over==1)return;
+{if(over==1)return;if(aq<2)return;
     aa=520;
     document.getElementById("aa").innerHTML = "横切";colorit(520);
 }
 
 function c521()
-{if(over==1)return;
+{if(over==1)return;if(aq<2)return;
     aa=521;
     document.getElementById("aa").innerHTML = "上切";colorit(521);
 }
 
 function c522()
-{if(over==1)return;
+{if(over==1)return;if(aq<2)return;
     aa=522;
     document.getElementById("aa").innerHTML = "下切";colorit(522);
 }
 
 function c535()
-{if(over==1)return;
+{if(over==1)return;if(aq<3)return;
     aa=535;
     document.getElementById("aa").innerHTML = "圆切";colorit(535);
 }
 
 function c630()
-{if(over==1)return;
+{if(over==1)return;if(aq<3)return;
     aa=630;
     document.getElementById("aa").innerHTML = "光";colorit(630);
 }
 
 function c641()
-{if(over==1)return;
+{if(over==1)return;if(aq<4)return;
     aa=641;
     document.getElementById("aa").innerHTML = "闪电";colorit(641);
 }
 
 function c642()
-{if(over==1)return;
+{if(over==1)return;if(aq<4)return;
     aa=642;
     document.getElementById("aa").innerHTML = "地震";colorit(642);
 }
 function c655()
-{if(over==1)return;
+{if(over==1)return;if(aq<5)return;
     aa=655;
     document.getElementById("aa").innerHTML = "毁灭";colorit(655);
 }
 
 function c210()
-{if(over==1)return;
+{if(over==1)return;if(aq<1)return;
     aa=210;
     document.getElementById("aa").innerHTML = "反";colorit(210);
 }
 
 function c220()
-{if(over==1)return;
+{if(over==1)return;if(aq<2)return;
     aa=220;
     document.getElementById("aa").innerHTML = "二反";colorit(220);
 }
 
 function c230()
-{if(over==1)return;
+{if(over==1)return;if(aq<3)return;
     aa=230;
     document.getElementById("aa").innerHTML = "三反";colorit(230);
 }
 
 function c310()
-{if(over==1)return;
+{if(over==1)return;if(aq<1)return;
     aa=310;
     document.getElementById("aa").innerHTML = "弓";colorit(310);
 }
 
 function c320()
-{if(over==1)return;
+{if(over==1)return;if(aq<2)return;
     aa=320;
     document.getElementById("aa").innerHTML = "二弓";colorit(320);
 }
 
 function c330()
-{if(over==1)return;
+{if(over==1)return;if(aq<3)return;
     aa=330;
     document.getElementById("aa").innerHTML = "三弓";colorit(330);
 }
 function c180()
-{if(over==1)return;
+{if(over==1)return;if(aq<1)return;
     aa=180;
     document.getElementById("aa").innerHTML = "神防";colorit(180);
 }
@@ -824,11 +836,32 @@ function c250()
     aa=250;
     document.getElementById("aa").innerHTML = "神反";colorit(250);
 }
+var x=0;
+function countsecond()
+{　
+	
+    x = x-1;
+	document.getElementById("timer").innerHTML=x ;
+	if(x>0)
+	{
+		setTimeout("countsecond()", 1000);
+	}
+    
+	else
+	{
+		ok();
+	}
+}
+function okok()
+{
+	x=4;
+	countsecond();
+}
 function g1()
 {
 document.getElementById("gm").innerHTML = "游戏" + winr;
 
-        document.getElementById("ask").innerHTML = "游戏重新开始"
+        document.getElementById("ask").innerHTML = "游戏开始"
         aq=00;bq=00;rd=1;aa=000;r=0;dead=0;
         //awin=0;bwin=0;winpa=100;winr=0;
 		document.getElementById("rd").innerHTML = "回合" + rd;
@@ -837,5 +870,6 @@ document.getElementById("gm").innerHTML = "游戏" + winr;
 		document.getElementById("aa").innerHTML = "气";
 		document.getElementById("bb").innerHTML = "气";
     over=0;colorit(aa);
-
+document.getElementById("board").style.display="block";
+	document.getElementById("menu").style.display="none";okok();
 }

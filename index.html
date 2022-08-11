@@ -9,38 +9,19 @@
 
 <link href="css/style.css" rel="stylesheet" type="text/css">
 
-<style type="text/css">
-body {
-	
-	background: url("image/bg.jpg") center no-repeat;
-}
-.left1 {
-width: 50%;
-float: left;
-	text-align: center;
-}
-
-.right1 {
-width: 50%;
-float: left;
-	text-align: center;
-}
-</style>
 </head>
-
+<body>
 	<div class="container-sh">
 		<div class="text-center">
 <h1><b>拍手游戏™ HTML5</b></h1>
 			<h3>www.clappinggame.top</h3>
 	  
 
-		  <button type="button" id="g1" onClick="g1()" class="btn btn-primary">重新开始游戏</button>
-		<button type="button" id="g2" onClick="window.open('https://www.clappinggame.net/')" class="btn btn-primary">拍手游戏官网</button>
-		<button type="button" id="g3" onClick="window.open('https://www.clappinggame.net/docs/')" class="btn btn-primary">拍手游戏教程</button>
+		 
 <hr>
 
-<h3 id="ask">游戏开始</h3>
-			<span id="gm">游戏1</span> <span id="rd">回合1</span> <span>胜利:</span><span id="aw">0</span> <span>失败:</span><span id="bw">0</span> <span id="sl">胜率100%</span>
+
+			<span id="gm">游戏0</span> <span id="rd">回合0</span> <span>胜利:</span><span id="aw">0</span> <span>失败:</span><span id="bw">0</span> <span id="sl">胜率0%</span>
 	
 			
 	  </div>
@@ -50,11 +31,11 @@ float: left;
       <div class="right1">  <img src="image/computer.svg" width="48"><h3>电脑</h3><span>气:</span><span id="bq">0</span><span>  招式:</span><span style="font-size: x-large" id="bb">气</span> </div>
   </div>
 <!--<center><span>回合用时:</span><span id="time">0</span></center>-->
-<center><span>www.clappinggame.top</span></center>
+<center><h2 id="timer">www.clappinggame.top</h2></center>
 		<hr>
-<div class="container text-center">
-	<button type="button" id="ok" onClick="ok()" class="btn btn-success" style="width:22%;">出招</button>
-<br>
+<div class="container text-center" id="board" style="display: none">
+	<!--<button type="button" id="ok" onClick="okok()" class="btn btn-success" style="width:22%;">出招</button>
+<br>-->
       <span type="button" id="t000" onclick="c000()" class="btn btn-dark" style="width:15%;"><img src="image/000.svg"> 气</span>
       <span type="button" id="t100" onclick="c100()" class="btn btn-dark" style="width:15%;"><img src="image/100.svg"> 防</span>
 	  <span type="button" id="t410" onclick="c410()" class="btn btn-dark" style="width:15%;">单枪</span>
@@ -91,16 +72,38 @@ float: left;
       <span type="button" id="t320" onclick="c320()" class="btn btn-dark" style="width:15%;">二弓</span>
       <span type="button" id="t330" onclick="c330()" class="btn btn-dark" style="width:15%;">三弓</span>
       <span type="button" id="t180" onclick="c180()" class="btn btn-dark" style="width:15%;">神防</span>
-</div>  
+	<br>
 <hr>
-<p>
-  拍手游戏(Html5网页版)根据 GPLv3 协议开放源代码，开放且自由。<br>
-  访问 <a href="https://github.com/clappinggame/clappinggame">GitHub仓库</a> 以获得详细信息。您可以在此处提交建议、反馈问题。
-		<!--1234567890游戏重新开始你爆气了！你胜利失败了！--></p>
-		<h4>Copyright © Clappingame . All rights reserved .</h4>
-		<h4>Powered by <a href="https://www.clappinggame.top">Clappingame</a> .</h4>
+		</div>  
+
+		<div class="container text-center" id="menu">
+			<h1 id="ask">等待游戏开始</h1>
+		 <button type="button" id="g1" onClick="g1()" class="btn btn-primary" style="font-size: 2rem;"> 开始游戏 </button><br>
+		<button type="button" id="g2" onClick="window.open('https://www.clappinggame.net/')" class="btn btn-primary">官网</button>
+		<button type="button" id="g3" onClick="window.open('https://www.clappinggame.net/docs/')" class="btn btn-primary">游戏教程</button>
+		<hr>
+		</div>
+		
+
+		<h4> Powered by Clappingame . </h4>
+		<h4>Copyright © 2019-2022 <a href="https://www.clappinggame.top">Clappingame</a> . All rights reserved .</h4>
+		<p>
+			<a href="https://github.com/clappinggame/clappinggame"><img alt="GitHub stars" src="https://img.shields.io/badge/View source code on GitHub-+-6699ff?style=flat-square&logo=github"></a>
+			<a href="https://github.com/clappinggame/clappinggame/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/clappinggame/clappinggame?style=flat-square"></a>
+			<a href="https://github.com/clappinggame/clappinggame/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/clappinggame/clappinggame?style=flat-square"></a>
+			<a href="https://github.com/clappinggame/clappinggame/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/clappinggame/clappinggame?style=flat-square"></a>
+			<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/clappinggame/clappinggame?style=flat-square">
+		<!--1234567890游戏重新开始你爆气了！你胜利失败了！平局结束--></p>
+            <div class="container text-center" style="display: none" id="bgm" >
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=39224639&auto=1&height=66"></iframe>
+		  </div>
 	</div>
 
 	<script src="js/game.js"></script>
+      <script>
+            var url = location.search;
+            if(url=="?37")
+            document.getElementById("bgm").style.display="block";
+      </script>
 </body>
 </html>

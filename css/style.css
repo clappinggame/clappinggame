@@ -5,7 +5,8 @@
 body
 {
 	font-family: thefont;
-	background: url("image/bg.jpg") center no-repeat;
+	//background: url("../image/bg.jpg") center no-repeat;
+	background-color: skyblue
 }
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -19,13 +20,13 @@ p {
 
 .left1 {
 width: 50%;
-height: 100%;
 float: left;
 	text-align: center;
 }
+
 .right1 {
 width: 50%;
-	height: 100%;
+float: left;
 	text-align: center;
 }
 .container {
@@ -110,6 +111,6 @@ width: 50%;
   box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
 }
 hr {
-  border: 0.5px solid white;	
+  border: 0.5px solid cornflowerblue;	
   overflow: visible;
 }
